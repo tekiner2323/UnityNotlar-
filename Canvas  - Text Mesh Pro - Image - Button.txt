@@ -1,0 +1,28 @@
+
+
+UI neslerinin neredeyse tamamı bir canvas üzerinde üzerinde görünür. Bunun için ekrana herhangi bir şekilde text button vs bir UI nesnesi koymak istenirse canvas gelecektir. Burda dikkat edilmesi gereken bir kaç husus var. UI canvası nerede render edileceği. 
+
+Canvas Screen Space'de veya World Space'de render edilebilir. (Çok anlamadım ama eğer karakter bizimle birlikte hareket ediyorsa World Space, yok karaktar ve ana plan sabitse Screen Space seçili olması gerekiyor.) 
+ 
+ Canvas'da dikkat edilmesi gereken bir diğer husus ise UI nesnelerinin boyuntlandırılabiliyor olması. Bu ne demek. Oyunun geliştirildiği ekran çözünürlüğü dışında bir ekranda oynanacaksa o zaman UI nesnelerinin yeniden boyutlandırılması lazım. Bunun için Canvas Scaler (Script)' özelliğinin açık olması gerekiyor. Burda ise önemli olan seçecek "Scale With Screen Size" olması gerekiyor. 
+
+ Bu ayarların akabinde önemli diğer bir husus geliştirici UI ekranı çözünürlük değerleri. Bunuda Game panelide görünen ekran ekran çözünürlüklerine göre ayarlamamız gerekiyor. Çünkü bizler oyunu geliştirirken bu noktalara bakarrak UI nesnelerimizi geliştirdik. O değerleri "Referance Resolotion" texboxlarına girmek gerekiyor.
+
+
+TextMeshPro seçeneğini bir iki yerde yükleyip import etmek gerekiyor. Geresi çocuk oyuncağı zaten. Metin yazacak yeri bulamıyorsan bırak bu işi zaten. 
+
+
+
+Image ekelemek için canvasa sağ tıklayıp UI kısmından Image demeniz gerekiyor. Eklenen kendi resimlerimizi göstermek için PNG uzantılı resim kullanmamız gerekiyor. Ayrıca yine Bu resim dosyamızın Inspector ekranından Textıre Type seçeneğini Sprite(2d and UI) seçeneğine almamız gerekiyor. Böylece artk UI uyumlu resim halini almış oldu. 
+
+
+Canvasta UI nesnelerinde CANVAS parrentine yakın olan üstte görünür. Önemli ve gizli bir posttur. 
+
+
+using UnityEngine.UI kütüphanesi eklenecek....!!
+
+
+Çık tatlı bişi buldum.... Can barı UI Image olarak yapılabiliyor.. Siyag ve beyaz aynı resmi üst üste koyuyorsun ve Azalacak olan Beyaz resim olduğunu var sayalım. Bu resmin Image Type'ını Filled seçiyoruz ve yönünü belirtiyoruz. Böylece resimi 00-1 arasında doluluk oranı seçebiliyoruz. 
+
+
+Buttonda çok bir espiri yok. Button Scpriy conpanenti üzerinde bir takım az kullanacağımız ayarlar dışında On Click diye gürünen bir seçim kısmı var. Oraya basarak bir script dosyası ekliyoruz. Bunun içinde butona basıldığında yapıcak iç metotdu belirliyoruz. 

@@ -1,0 +1,8 @@
+
+
+Nesne ismi ve Nesne TAG' bilgisi bu noktada önem arz etmektedir.
+
+iki farklı şekilde companentlere erişim mümkündür. Bunlardan birincisi: Script dosyasının üzerinde çalıştığı GameObject'in companentleri, ikinci ise Başka bir GameObjectin üzerinde çalıştığı companente erişmektir.
+
+Birici olarak açıkladığım seçeneği  devam ettireceğim...
+ EKSİK

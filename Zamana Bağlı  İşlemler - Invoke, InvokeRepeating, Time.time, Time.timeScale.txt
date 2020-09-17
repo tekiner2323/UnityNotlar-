@@ -1,0 +1,58 @@
+
+
+Time.time  Unityide olaylar zinciri başladığında sayım yapan bir sayac. PIC'de TIMER değişkeni. Time.time diyerek o değişene ulaşabiliriz.
+
+
+
+Time.timeScale ile TIMER sayacının preslcearını değiştiriz. Böylece saatin yavaş ve hızlı saymasını sağlayabiliriz. 
+
+Time.timeScale değeri 0.0f ile 1.0f arasında değer alabilir.
+
+Ör: Time.timeScale = 1.0f;
+
+
+Zamanın nasıl ve ne şekilde çalıştığını öğrendiğimize göre şimdide zamana bağlı fonksiyonlara bakalım. 
+
+Bunlardan biri Invoke diye tanımlanan fonksiyondur ve parametre olarak bir fonktsiyon ve zaman değeri alır.
+
+
+örnek:
+
+	void deneme_metot()
+	{
+		Debug.Log(Time.time.toStirng());
+	}
+	
+	void Start()
+	{
+	Invoke("deneme_metot", 1.0f);
+	}
+
+
+Bu şekilde çalıştıracak olursak program başladıktan tam 1 saniye sonra ekrana o anki zaman değerini yazacaktır.
+
+
+
+IvokeRepating fonksiyonu ise belirli bir işi defalarca yapmak için kullanılan tekrar fonksiyonudur. Böylece bizim yerimize istediğimiz şekilde bir çok işi yapabilecektir.
+
+
+IvokeRepating("Fonksiyon_ismi",kaç_sn_sonra_Baslayacak, Kaç_sn_aralıklarla tekrarlanacak?);
+
+IvokeRepating("deneme_metot",0.0f, 1,0f);  
+
+Bu şekilde başlatıkan IvokeRepating fonksiyonu dırdırmak için içindeki çağırdığı fonksiyon içerisne 
+
+void deneme_metot()
+	{
+		Debug.Log(Time.time.toStirng());
+
+		if(kontrol_Sayisi==5)
+		{
+			CancelIvoke("deneme_metot");
+		}
+	}
+
+
+CancelIvoke(); Bu şekilde çalıştırılsa InvokeRepating varsa hepsini durdurur. 
+
+

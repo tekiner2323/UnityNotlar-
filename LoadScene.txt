@@ -1,0 +1,20 @@
+
+
+Bir sahneyi yüklemek için kullanılır. Dikkat edilmesi gereken Project klasöründe yüklenilecek sahnenin yolunu ve adını belirtmek gerekiyor.
+
+Kütüphane kullanır. 
+
+using UnityEngine.SceneManagement;
+
+
+SceneManeger.LoadScene("Scenes/SampleScene");
+
+						Klasör/Sahne adı
+
+
+Sahne geçişleri için File--> Build Settings diyoruz. Gelen pencerece Scene In Build kısmına tüm sahnelerin eklenmesi lazım. 
+
+Sıralanma şekli önemlidir. En üstte bulunan sahne ilk açılır.
+
+
+Yine başka bir sahne açmak için LoadScene ile açacağımız yeni sahnenin adresini vermek yeterli olacaktır. 
