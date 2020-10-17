@@ -1,0 +1,15 @@
+Animasyon Devam Niteliğindeki Ders
+
+
+Bu yazıda animasyonlar arası geçişlerin nasıl yapıldığını göreceğiz. 
+
+Animator penceresinde parametlere tabından küçük bir artı sembolü var. Oraya basıldığında bizi Float, Int, Bool, ve Trigger değişkenleri bizi karşılayacaktır.
+
+Trigger değişkeni tetikleyici olarak söyleyebiliriz. Triggerde aldığı değişken adına göre, floatta aldığı ondalıklı sayı Int'de aldığı tam sayıya döre geçiş yaparken, Bool tipinde sadece aldığı sadece True veya False değerlerine göre geçiş yaparlar.
+
+Bir değişlen ismi seçilir. Akabinde bir isim ister ve isim girilir. Artık parametre penceresinde görünecektir. 
+
+İki animasyon arasında geçiş yapan okları çizili varsayıyoruz. Geçiş okları seçildikten sonra Inpector penceresinde Conditions parametre bölmesinden + tuşuna basılır. Parametre sekmesinde oluşturduğumuz değişken burada seçilebilir. Seçtikten sonra yanındaki kutucuktan çalışma durumunu da seçebiliriz. 
+
+Kaynak:
+https://www.youtube.com/watch?v=JnPT1uij_g8&list=PLLnJIFQamFAeIdo8GY1PLjjHXM8-Uv9Rc&index=19

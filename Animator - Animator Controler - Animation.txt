@@ -1,0 +1,27 @@
+
+
+Animasyon yapmak için özellikle nesneler bir GameObjectin bir alt nesnesi olmak zorundadır.
+
+Animator companneti eklenmelidir. Bu nesneye companent olarak ekleniyor.
+
+2. olarak ise assetlerin bulunduğu klasörde Animator Controler ekleniyor. 
+
+Animator Controller companenti animator companentine nesne olarak eklenecektir.
+
+3. olarak animasyon eklenecek nesne seçili iken window sekmesinden Animation --> Animation (Ctrl + 6) seçilir
+
+Açılan pencerede create buttonuna basılarak kayıt oluşturulur.
+
+Kayıt oluşturulduktan sonra küp bir miktar hareket ettirilir. Bu hareketten sonra time barında bir yer seçilmiş olur. Sonrasında hareketin bitiş time anına gidilir ve sonra nesne hareket ettirilerek o noktoya bıkralır. 
+
+
+Sonrasında ise nesnenin üzerinde bulunan Animator companentinde animator controleri eklediğimiz yere çift tıklanılarak animatör penceresi açılır.
+
+Bu penerede Inspector kısmında speed ayarı yapılabilir. Burada varsayılan değer 1 dir. Çarpan olarak animasyon eklenir. 
+
+Proje klasöründe bulunan animasyon dosyasından ise süreklilik durumunu ayarlayabiliriz. 
+
+
+Kaynak:
+
+https://www.youtube.com/watch?v=DsfbFnIkD78&list=PLLnJIFQamFAeIdo8GY1PLjjHXM8-Uv9Rc&index=18

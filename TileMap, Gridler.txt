@@ -1,0 +1,41 @@
+
+
+Tilemaps yönetmi:
+
+Genellikle 2^n şeklinde oluşturulmuş 32-64-128 piksellik kare görüntüler kullanılarak elde edilen bütün şeklinde bulunan resimler. Bunlar bir tasaramcı tarafıdan yapıldığını var sayarak anlatımlarıma devam edeceğim. 
+
+
+Öncelikle bir tane tilemap seti bulu bulunur. 
+
+1 Resimlerin tamamının bulunduğu ki buna genellikle sprite dosyası denir bu dosya olduğu gibi unity proje dosyasına eklenir. 
+
+Bu eklenen dosya seçilerek Inspector panelinden texture type seçeneği sprite(2D and UI) olarak seçilir. Sprite mode' multiple seçilir akabinde 'Pixels Per Unit' seçeneğinde görsel hangi pixel boyutunda ayarlanmışsa o değer yazılır. 32-64-128... gibi bir integer değer yazılır. Akabinde 'Filter Mode' seçeneği ise 'Point (no filter)' olrak seçilir. Sonrasında 'Comprassion' seçenği 'None' olarak seçilir. Apply düğmesine basılır. 
+
+
+Sprite Editör sekmesinde resim açılır. Eğer Sprite Editor otomatik olarak gelmediyse Window-2D-Srpite Editor yolu ile açılır. Slice tabına basılır 'Type' seçeneği 'Grid By Cell Size' seçeneği seçilir. Akabinde her bir resim karesinin boyutu pixel size kısmına girilir. Varsa çerçeve boşluğu o değer Offsete girilir. Varsa iki resim karesi arasındaki boşluk değeri panndig kısmına girilir. Akabinde tüm bu ayarları yaptığımız yerin altındaki yerde bulunan Slice butonuna basılır. Basıldığı zaman  her bir resim karesi parçalandığını görürsünüz. Tıklayarak resimlerin doğru ayrılıp ayrılmadığına bakabilirsiniz. Eğer herşey yolunda ise Apply butonuna basarak değişiklikleri kabul edersiniz. Kısa bir işleme süresi sonunda Asset klasörünüzde tüm resimleri ilk attığınız sprite resminin altında parçalanmış halde görebilirsiniz. 
+
+
+Artık Sprite'ımı parçaladığımıza göre şimdi onları sırası bir düzen halinde yerleştireceğimiz alan olan Grid objesini ekleyelim. Bunun için Hierarchy penceresine sağ tıklayalım ve 2D object -> TileMap nesnesini ekleyelim. Hierarchy'de Grid adında bir nesne oluştuğunu altında otomatik olarak TileMap adında bir obje oluştuğunu göreceksiniz. 
+
+
+Bu noktada ek bir açıklama yapma gereği duygum. Yer yüzünün katmanlarını kullanarak örnek vereceğim. Siz en alt katta kayaçların olduğunu üstünde toprağın üstünde ağacın olduğunu biliyorsunuz. TileMap ile hazırlanacak olan yaplarda tamamen böyle hazırlanmak zorundadır. Yani görünümleri ayarlamak için bir sıralama söz konusudur. Yani katman katman yapabiliriz. istediğimiş şekli. 
+
+
+Şimdi çimizimizi yapabilmek için TilePalete'i açmamız gerekiyor. Window -> 2d -> Tile Palette diyerek bu pencereyi açıyoruz. 
+
+Sol tarafta bulunan Crete New Palette diyerek kendimize bir çizim paleti açıyoruz. İsim ve dosya yolu verip kayıt ediyoruz. 
+
+İlk adımlarda Sprite şeklindekki görseli parçayıp bir sürü resim elde etmiştik. Bu resimlerin her birini bu paletin içine atmamız gerekiyor. Seçip Tile Palettin içine sürüklüyoruz ve bize yeniden isim ve klasör soruyor. Bu noktada hangi katmanın dosyalarını barıdırıyorsa paletiniz ona benzer bir isim vermenizi tavsite ederim. Artıl paletiniz var. şimdi bunu kendinize göre düzenleyiniz. 
+
+
+
+Bir miktar kareyi yan yana getirdiğinizde game ekranında çirkin düz çizgiler meydana gelir. Bunun için Edit-> Projent Setting -> Quality panelinde bulunan Anti Alising seçeneğini disable yapınız. 
+
+Benim bigisayarımda bu yöntem işe yamadı bende kameramı 0.01 kadar sağa hareket ettirdim. Ve çizgiler kapandı.
+
+
+Zemini oluşturdıktan sonra Zeminin üzerine birşeyler yerleştirmek gerecektir. Yol gibi, Kayalık gibi. Engel gibi. Yol gibi. Bunun için sahnemizde bulunan Grid objesine sağ tıklıyoruz ve yeni bir tile map ekliyoruz
+
+Inspector Panelinde Addionnal Setting altıda bulunan 'Order in Layer' seçeneğini bir önceki katmandan 1 arttırıyoruz. -sonsuza yakın olan en alttaki sırası ile yükselecek şeklince bir sıralama yapmamız gerekiyor.
+
+Tile Map'i yeniden açıyoruz. Active Tilemap'i işlem yapacağınız katman olarak ayarlıyorsunuz ve işlem yapmaya başlayabilirsiniz. 
